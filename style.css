@@ -1,0 +1,118 @@
+html{
+    background-color: black;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+.gamescreen{
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+.gamegrid{
+    width: 70%;
+}
+.scorebox{
+    width: 20%;
+    color: white;
+	margin-top:4%;
+	
+}
+.heading{
+    color: white;
+	text-align:center;
+	font-family: 'Brush Script MT';
+	font-size:50px;
+	
+}
+.mainbox{
+    width: 71%;
+    height: 77%;
+    margin-left: 13%;
+    margin-top: 6%;
+    border-style: groove;
+    border-color: white;
+}
+.rows{
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+.cards{
+    width: 20%;
+    height: 100%;
+    border-style: groove;
+    border-color: azure;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transition-delay: 250ms;
+    transform: rotateY(0deg);
+}
+.front, .back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    font-size:10px;
+  }
+  
+  .front {
+    border: 2px solid rgb(14, 211, 21);
+    width: 100%;
+    height: 100%;
+    color: white;
+    
+  }
+  
+  .back {
+    border: 2px solid rgb(14, 211, 21);
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+
+    
+  }
+.innerimage{
+    height: 100%;
+    width: 100%;
+
+}
+.small{
+    border-radius: 50%;
+    width: 29%;
+    height: 29%;
+    background-color: rgb(14, 211, 21);
+    border-style: dashed;
+    border-color: black;
+}
+.Swap{
+    display: flex;
+	cursor:pointer;
+	
+}
+.swaping{
+    margin: 2px;
+    border: 2px solid rgb(14, 211, 21);
+    height: 100%;
+    width: 100%;
+}
+
+.finalscore{
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 12%;
+    padding-left: 23%;
+    color: greenyellow;
+    font-size: 286%;
+
+}
