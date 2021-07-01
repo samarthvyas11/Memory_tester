@@ -23,6 +23,7 @@ body{
     color: white;
 	margin-top:4%;
 	
+	
 }
 .heading{
     color: white;
@@ -114,5 +115,101 @@ body{
     padding-left: 23%;
     color: greenyellow;
     font-size: 286%;
+
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.rules_1{
+	font-size:22px;
+	color: white;
+	text-decoration: none;	
+}
+.rules_1:hover{
+	
+	text-decoration:underline;
+	text-shadow: 1px 1px;
+}
+
+
+
+
+@media (max-width: 596px) {
+
+
+.gamescreen{ 
+    height: 75%;
+    width: 100%;
+}
+.gamegrid{
+    width: 75%;
+}
+.scorebox{
+    width: 5%;
+	margin-left:0%;
+	font-size:9px;
+}
+
+.heading{
+	color:whitesmoke;
+	
+}
+.Swap{   
+	flex-direction: column;
+}
+
+.ongoingcard img{
+	width:60px;
+	
+}
+.popup{
+	width:70%;
+}
+.rules_1{
+	font-size:11px;
+}
 
 }

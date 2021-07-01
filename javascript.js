@@ -24,9 +24,6 @@ for(var i = 0 ;i < 1000;i++)
 }
 
 
-
-
-
 for(var i = 0;i < 5;i++)
 {  cards_in += '<div class="rows"><card class="cards" id="card'+ (i+1).toString() +'1" onclick="cardclicked('+ (i+1).toString() +'1)"><div class="front" ><div class="small"></div></div><div class="back">'
 
@@ -175,9 +172,15 @@ function completed(){
     k2 = document.getElementsByClassName("container")
     k2[0].style.display = "none"
     
-    final = '<h1>Hurrah! Congratulations!!!</h1><h2 style="margin-left:7%;">Total Steps taken :'+steps.toString()+'</h2>'
+    final = '<h1>Hurrah! Congratulations!!!</h1><h2 style="margin-left:7%;">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()">Restart</button>'
     
     k2 = document.getElementsByClassName("finalscore")
     k2[0].style.display="block"
     k2[0].innerHTML = final
+    
+}
+
+function restart(){
+    location.reload();
+
 }

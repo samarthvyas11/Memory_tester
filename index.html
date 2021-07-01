@@ -17,19 +17,20 @@
                 </div>
             </div>
             <div class="scorebox">
+			     <a class="rules_1" href="#popup1"><b>Instructions</b></a>
                  <div class="ongoing_number">
-                     <h2>Swap</h2>
+                     <h2>Swap:</h2>
                      <div class="Swap">
-                         <img class="swapimg" onclick="swapchange(1)" src="img1.jpeg">
-                         <img class="swapimg" onclick="swapchange(2)" src="img2.jpeg">
-                         <img class="swapimg" onclick="swapchange(3)" src="img3.jpeg">
+                         <img class="swaping" onclick="swapchange(1)" src="img1.jpeg">
+                         <img class="swaping" onclick="swapchange(2)" src="img2.jpeg">
+                         <img class="swaping" onclick="swapchange(3)" src="img3.jpeg">
                      </div>
 
-                     <h2>Steps Taken</h2>
+                     <h2>Steps Taken:</h2>
                      <div class="totalstep">
 
                      </div>
-                     <h2>Ongoing card</h2>
+                     <h2>Ongoing card:</h2>
                      <div class="ongoingcard">
 
                      </div>
@@ -43,6 +44,25 @@
     <section class="finalscore">
          
     </section>
+	<!--- Rules------>
+	<div id="popup1" class="overlay">
+	<div class="popup">
+		<center><h2>Instructions</h2></center>
+		<a class="close" href="#">&times;</a>
+		<ul class="content">
+			<li>There are total 25 boxes which contains 3 types of images.</li>
+			<li>You can view the image just by clicking over the box once.</li>
+			<li>You'll have to select boxes with the same image consecutively.</li>
+			<li>If you'll select the correct box, which mathces the ongoing box the image will flip.Also you can change the ongoing box image to change the ongoing image. It will increase the number of steps taken by number 5.</li>
+			<li>In the same manner, you'll have to select all the correct boxes in minimum number of attempts.</li>
+			<li>1 step will be added everytime you'll click on a box to flip it.</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
     <script src="javascript.js"></script>
 </body>
 </html>
