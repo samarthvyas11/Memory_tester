@@ -7,39 +7,35 @@
     <title>Memory Tester</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.jpeg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <section class="container_main">
         <div>
-            <h1>Memory Tester</h1>
-        <h3>Your name</h3>
-        <input type="text" id="username" name="username" >
-        <h3>Grid Type</h3>
-        <select name="colorpick" id="gridpick">
+            <h1>KIOKU (記憶)</h1>
+			<!--<img src="logo1.png" style="height:170px; width:170px;">-->
+        <h3>Enter Name:</h3>
+        <input type="text" id="username" name="username" style="border-radius:10px;width:100%;height:5vh;" >
+        <h3>Grid Type:</h3>
+        <select name="colorpick" id="gridpick" style="width:100%;border-radius:10px;font-weight:bold;height:5vh;">
             <option value="2">2 X 2</option>
             <option value="3">3 X 3</option>
             <option value="4">4 X 4</option>
             <option value="5">5 X 5</option>
         </select>
-        <button onclick="start_game()">Start</button>
+        <button onclick="start_game()" class="start_button">START</button>
        </div>
     </section>
 
-
-
-
-
-
-
-    <section class="container">
-        <h2 class="heading">Memory Tester</h2>
+<section class="container">
+        <h2 class="heading">KIOKU (記憶)</h2>
         <div class="gamescreen">
             <div class="gamegrid">
                 <div class="mainbox">
                 </div>
             </div>
             <div class="scorebox">
-			     <a class="rules_1" href="#popup1"><b>Instructions</b></a>
+			     <a class="rules_1" href="#popup1"><b><i class="fa fa-copy" style="color:white;padding:1.2%;"></i>Rules</b></a>
                  <div class="ongoing_number">
                      <h2>Swap:</h2>
                      <div class="Swap">
@@ -49,7 +45,7 @@
                      </div>
 
                      <h2>Steps Taken:</h2>
-                     <div class="totalstep">
+                     <div class="totalstep" style="font-size:25px;">
 
                      </div>
                      <h2>Ongoing card:</h2>
@@ -63,19 +59,22 @@
         </div>
     </section>
 
-    <section class="finalscore">
+
+
+<section class="finalscore">
          
-    </section>
+</section>
+	
 	<!--- Rules------>
 	<div id="popup1" class="overlay">
 	<div class="popup">
-		<center><h2>Instructions</h2></center>
+		<center><h2>Rules</h2></center>
 		<a class="close" href="#">&times;</a>
 		<ul class="content">
-			<li>There are total 25 boxes which contains 3 types of images.</li>
+			<li>There are total N*N boxes which contains 3 types of images.</li>
 			<li>You can view the image just by clicking over the box once.</li>
 			<li>You'll have to select boxes with the same image consecutively.</li>
-			<li>If you'll select the correct box, which mathces the ongoing box the image will flip.Also you can change the ongoing box image to change the ongoing image. It will increase the number of steps taken by number 5.</li>
+			<li>If you'll select the correct box, which mathces the ongoing box the image will flip. Also you can change the ongoing box image to change the ongoing image. It will increase the number of steps taken by number 5.</li>
 			<li>In the same manner, you'll have to select all the correct boxes in minimum number of attempts.</li>
 			<li>1 step will be added everytime you'll click on a box to flip it.</li>
 		</ul>

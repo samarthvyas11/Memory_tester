@@ -1,5 +1,4 @@
 var matrix = [[1,2,3,3,2],[1,2,3,1,2],[1,2,3,3,2],[2,1,3,2,3],[1,3,2,1,1]];
-console.log(matrix[1][2])
 var oncard = [0,0];
 var ongoingcard = -1
 cards_in = " ";
@@ -19,7 +18,9 @@ function start_game(){
     k1 = document.getElementsByClassName("container")
     k1[0].style.display = "block";
     console.log("hello")
+    window.location.href = '#popup1';
     show();
+	
 
 }
 
@@ -32,10 +33,10 @@ function getRndInteger(min, max) {
 function show(){  
 
 for(var i = 0 ;i < 1000;i++)
-{   row1 = getRndInteger(0,total-1)
-    col1 = getRndInteger(0,total-1)
-    row2 = getRndInteger(0,total-1)
-    col2 = getRndInteger(0,total-1)
+{   row1 = getRndInteger(0,4)
+    col1 = getRndInteger(0,4)
+    row2 = getRndInteger(0,4)
+    col2 = getRndInteger(0,4)
 
     c2 = matrix[row1][col1];
     matrix[row1][col1] = matrix[row2][col2];
@@ -156,7 +157,7 @@ function completed(){
     k2 = document.getElementsByClassName("container")
     k2[0].style.display = "none"
     
-    final = '<h1>Hurrah! Congratulations!!!</h1><h2 style="margin-left:7%;">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()">Restart</button>'
+    final = '<h1 class="h11">Hurrah! Congratulations!!!</h1><h2 class="h12">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()" class="restart_button">Restart</button>'
     
     k2 = document.getElementsByClassName("finalscore")
     k2[0].style.display="block"

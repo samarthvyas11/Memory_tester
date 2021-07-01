@@ -1,6 +1,7 @@
 html{
     background-color: black;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
+	overflow-x:hidden;
 }
 body{
     margin: 0px;
@@ -115,6 +116,30 @@ body{
 
 }
 
+.restart_button{
+	background-color: #4CAF50;  
+    color: white;
+    padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:7px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  margin-left:20%;
+	
+}
+
+.restart_button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.h12{
+	margin-left:7%
+}
+
 
 
 .overlay {
@@ -209,6 +234,26 @@ body{
 	font-size:11px;
 }
 
+.finalscore{
+	font-size:19px;
+	padding:4%;
+	width:20%;
+	margin:6%;
+		
+}
+.h11{
+	text-indent: 50px;
+	margin-left:29%;
+}
+.h12{
+	white-space: nowrap ;
+	margin-left:13%;
+}
+.restart_button{
+	margin-left:111%;
+	margin-top:50%;
+}
+
 }
 
 .container_main{
@@ -219,5 +264,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.container_main h1{
+	
+	font-size:50px;
+	font-family: "Times New Roman", Times, serif;
+	
+}
+
+.start_button{
+	
+    text-align: center;
+	width:70%;
+	margin-top:50px;
+	margin-left:11%;
+    font-weight: bold;
+	font-size:25px;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
 
 }
