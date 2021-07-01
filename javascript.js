@@ -5,17 +5,37 @@ var ongoingcard = -1
 cards_in = " ";
 var steps = 0
 var done = 0
+var total = 5;
+var username = "";
+
+
+
+function start_game(){
+    console.log("mee aagya")
+    total = parseInt(document.getElementById("gridpick").value)
+    username = document.getElementById("username").value
+    k1 = document.getElementsByClassName("container_main")
+    k1[0].style.display = "none";
+    k1 = document.getElementsByClassName("container")
+    k1[0].style.display = "block";
+    console.log("hello")
+    show();
+
+}
 
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
 
+
+function show(){  
+
 for(var i = 0 ;i < 1000;i++)
-{   row1 = getRndInteger(0,4)
-    col1 = getRndInteger(0,4)
-    row2 = getRndInteger(0,4)
-    col2 = getRndInteger(0,4)
+{   row1 = getRndInteger(0,total-1)
+    col1 = getRndInteger(0,total-1)
+    row2 = getRndInteger(0,total-1)
+    col2 = getRndInteger(0,total-1)
 
     c2 = matrix[row1][col1];
     matrix[row1][col1] = matrix[row2][col2];
@@ -23,69 +43,33 @@ for(var i = 0 ;i < 1000;i++)
 
 }
 
+for(var  i = 0; i < total ;i++){
+cards_in += '<div class = "rows">'
+for(var j  = 0 ;j < total;j++ )
+{
+    cards_in += '<card class="cards" id="card'+ (i+1).toString() + (j+1).toString()  +'" onclick="cardclicked('+ (i+1).toString() + (j+1).toString() +')"><div class="front" ><div class="small"></div></div><div class="back">'
 
-for(var i = 0;i < 5;i++)
-{  cards_in += '<div class="rows"><card class="cards" id="card'+ (i+1).toString() +'1" onclick="cardclicked('+ (i+1).toString() +'1)"><div class="front" ><div class="small"></div></div><div class="back">'
+    if(matrix[i][j] == 1)
+    { cards_in += '<img class="innerimage" src="img1.jpeg">'}
+    else if(matrix[i][j] == 2){
+        cards_in += '<img class="innerimage" src="img2.jpeg">'
+    }
+    else{
+        cards_in += '<img class="innerimage" src="img3.jpeg">'
+    }
+    cards_in += '</div></card>'
+}
+cards_in += '</div>'
+}
 
-if(matrix[i][0] == 1)
-{ cards_in += '<img class="innerimage" src="img1.jpeg">'}
-else if(matrix[i][0] == 2){
-    cards_in += '<img class="innerimage" src="img2.jpeg">'
-}
-else{
-    cards_in += '<img class="innerimage" src="img3.jpeg">'
-}
-
-cards_in +='</div></card><card class="cards" id="card'+ (i+1).toString() +'2"  onclick="cardclicked('+ (i+1).toString() +'2)"><div class="front"><div class="small"></div></div><div class="back">'
-
-if(matrix[i][1] == 1)
-{ cards_in += '<img class="innerimage" src="img1.jpeg">'}
-else if(matrix[i][1] == 2){
-    cards_in += '<img class="innerimage" src="img2.jpeg">'
-}
-else{
-    cards_in += '<img class="innerimage" src="img3.jpeg">'
-}
-cards_in +='</div></card><card class="cards" id="card'+ (i+1).toString() +'3"  onclick="cardclicked('+ (i+1).toString() +'3)"><div class="front"><div class="small"></div></div><div class="back">'
-if(matrix[i][2] == 1)
-{ cards_in += '<img class="innerimage" src="img1.jpeg">'}
-else if(matrix[i][2] == 2){
-    cards_in += '<img class="innerimage" src="img2.jpeg">'
-}
-else{
-    cards_in += '<img class="innerimage" src="img3.jpeg">'
-}
-cards_in += '</div></card><card class="cards" id="card'+ (i+1).toString() +'4"  onclick="cardclicked('+ (i+1).toString() +'4)"><div class="front"><div class="small"></div></div><div class="back">'
-if(matrix[i][3] == 1)
-{ cards_in += '<img class="innerimage" src="img1.jpeg">'}
-else if(matrix[i][3] == 2){
-    cards_in += '<img class="innerimage" src="img2.jpeg">'
-}
-else{
-    cards_in += '<img class="innerimage" src="img3.jpeg">'
-}
-cards_in += '</div></card><card class="cards" id="card'+ (i+1).toString() +'5"  onclick="cardclicked('+ (i+1).toString() +'5)"><div class="front"><div class="small"></div></div><div class="back"> '
-if(matrix[i][4] == 1)
-{ cards_in += '<img class="innerimage" src="img1.jpeg">'}
-else if(matrix[i][4] == 2){
-    cards_in += '<img class="innerimage" src="img2.jpeg">'
-}
-else{
-    cards_in += '<img class="innerimage" src="img3.jpeg">'
-}
-cards_in += '</div></card></div>'
-}
 k1 = document.getElementsByClassName('mainbox');
 k1[0].innerHTML = cards_in;
-
-
+}
 
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
-
 
 async function cardclicked(N){
     steps += 1
@@ -128,7 +112,7 @@ async function cardclicked(N){
             k1 = document.getElementById(card_num)
             if(k1.style.transform != "rotateY(180deg)")
             {k1.style.transform = "rotateY(180deg)";}
-            if(done == 25)
+            if(done == total*total)
             {completed();}
         
         }
