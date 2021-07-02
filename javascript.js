@@ -10,14 +10,12 @@ var username = "";
 
 
 function start_game(){
-    console.log("mee aagya")
     total = parseInt(document.getElementById("gridpick").value)
     username = document.getElementById("username").value
     k1 = document.getElementsByClassName("container_main")
     k1[0].style.display = "none";
     k1 = document.getElementsByClassName("container")
     k1[0].style.display = "block";
-    console.log("hello")
     window.location.href = '#popup1';
     show();
 	
