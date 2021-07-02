@@ -222,8 +222,10 @@ body{
     flex-wrap: wrap;
 }
 .Swap{
-    width: 53%;
     height: 41px;
+}
+.ongo{
+    margin-left: 86px;
 }
 .mainbox{
     height: 100%;
