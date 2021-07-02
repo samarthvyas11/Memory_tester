@@ -219,9 +219,10 @@ body{
 .ongoing_number{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 .Swap{
-    width: 39%;
+    width: 53%;
     height: 41px;
 }
 .mainbox{
