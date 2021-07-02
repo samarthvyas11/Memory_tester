@@ -208,7 +208,7 @@ body{
     flex-wrap: wrap-reverse;
 }
 .gamegrid{
-    width: 66%;
+    width: 100%;
     height:58%;
 }
 .scorebox{
@@ -222,7 +222,7 @@ body{
     flex-wrap: wrap;
 }
 .Swap{
-    height: 89px;
+    height: 100px;
 }
 .ongo{
     margin-left: 86px;
