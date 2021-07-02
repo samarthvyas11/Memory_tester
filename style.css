@@ -41,10 +41,10 @@ body{
 .rows{
     display: flex;
     width: 100%;
-    height: 20%;
+    /* height: 20%; */
 }
 .cards{
-    width: 20%;
+    /* width: 20%; */
     height: 100%;
     border-style: groove;
     border-color: azure;
@@ -205,26 +205,39 @@ body{
 .gamescreen{ 
     height: 75%;
     width: 100%;
+    flex-wrap: wrap-reverse;
 }
 .gamegrid{
-    width: 75%;
+    width: 66%;
+    height:58%;
 }
 .scorebox{
-    width: 5%;
+    width: 100%;
 	margin-left:0%;
-	font-size:9px;
+	font-size:1.2vh;
+}
+.ongoing_number{
+    width: 100%;
+    display: flex;
+}
+.Swap{
+    width: 39%;
+    height: 41px;
+}
+.mainbox{
+    height: 100%;
 }
 
 .heading{
 	color:whitesmoke;
 	
 }
-.Swap{   
-	flex-direction: column;
-}
+
 
 .ongoingcard img{
-	width:60px;
+    width: 47px;
+    border-color: darkorchid;
+    border-style: groove;
 	
 }
 .popup{

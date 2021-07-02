@@ -45,10 +45,10 @@ for(var i = 0 ;i < 1000;i++)
 }
 
 for(var  i = 0; i < total ;i++){
-cards_in += '<div class = "rows">'
+cards_in += '<div class = "rows" style="height:' +  parseInt(100/total).toString() + '%">'
 for(var j  = 0 ;j < total;j++ )
 {
-    cards_in += '<card class="cards" id="card'+ (i+1).toString() + (j+1).toString()  +'" onclick="cardclicked('+ (i+1).toString() + (j+1).toString() +')"><div class="front" ><div class="small"></div></div><div class="back">'
+    cards_in += '<card class="cards" style="width:'+ parseInt(100/total).toString() +'%" id="card'+ (i+1).toString() + (j+1).toString()  +'" onclick="cardclicked('+ (i+1).toString() + (j+1).toString() +')"><div class="front" ><div class="small"></div></div><div class="back">'
 
     if(matrix[i][j] == 1)
     { cards_in += '<img class="innerimage" src="img1.jpeg">'}
@@ -157,7 +157,7 @@ function completed(){
     k2 = document.getElementsByClassName("container")
     k2[0].style.display = "none"
     
-    final = '<h1 class="h11">Hurrah! Congratulations!!!</h1><h2 class="h12">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()" class="restart_button">Restart</button>'
+    final = '<h1 class="h11">Hurrah! Congratulations!!!</h1><h2>'+ username +'</h2><h2 class="h12">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()" class="restart_button">Restart</button>'
     
     k2 = document.getElementsByClassName("finalscore")
     k2[0].style.display="block"
