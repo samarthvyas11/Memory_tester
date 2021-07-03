@@ -112,7 +112,8 @@ async function cardclicked(N){
             if(k1.style.transform != "rotateY(180deg)")
             {k1.style.transform = "rotateY(180deg)";}
             if(done == total*total)
-            {completed();}
+            {   await sleep(1000);
+                completed();}
         
         }
         else
