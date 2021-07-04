@@ -106,14 +106,27 @@ body{
 }
 
 .finalscore{
-    display: none;
-    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding-top: 12%;
-    padding-left: 23%;
-    color: greenyellow;
-    font-size: 286%;
+    font-size: 3vw;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: aliceblue;
 
+}
+.final_sub{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 52%;
+    font-size: 3vw;
+    margin-left: 5%;
+    color: aliceblue;
+}
+.final_image{
+    width: 36%;
+    height: 79vh;
 }
 
 .restart_button{
@@ -129,6 +142,7 @@ body{
   -webkit-transition-duration: 0.4s; 
   transition-duration: 0.4s;
   margin-left:20%;
+  height: 10%;
 	
 }
 
@@ -137,7 +151,8 @@ body{
 }
 
 .h12{
-	margin-left:7%
+	margin-left: 0%;
+    
 }
 
 
@@ -263,7 +278,8 @@ body{
 }
 .h12{
 	white-space: nowrap ;
-	margin-left:13%;
+	margin-left:0%;
+	font-size:21px;
 }
 .restart_button{
 	margin-left:111%;
@@ -272,22 +288,30 @@ body{
 
 }
 
+
+
+
 .container_main{
     height: 100vh;
     width: 100%;
-    background-color: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+	background-image:url("img4.jpeg");
+	background-repeat: no-repeat;
+  
 
 }
+
+
 .container_main h1{
 	
 	font-size:50px;
 	font-family: "Times New Roman", Times, serif;
 	
 }
+
 
 .start_button{
 	

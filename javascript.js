@@ -3,7 +3,7 @@ var oncard = [0,0];
 var ongoingcard = -1
 cards_in = " ";
 var steps = 0
-var done = 0
+var done = 23
 var total = 5;
 var username = "";
 
@@ -156,10 +156,10 @@ function completed(){
     k2 = document.getElementsByClassName("container")
     k2[0].style.display = "none"
     
-    final = '<h1 class="h11">Hurrah! Congratulations!!!</h1><h2>'+ username +'</h2><h2 class="h12">Total Steps taken :'+steps.toString()+'</h2><button onclick="restart()" class="restart_button">Restart</button>'
-    
+    final = '<img class="final_image" src="https://media.giphy.com/media/9vVCPK87Aw6v6/giphy.gif"><div class="final_sub"><h1 class="h11">Hurrah! Congratulations!!!</h1><h2 class="h12">Steps taken by '+ username +': '+steps.toString()+'</h2><button onclick="restart()" class="restart_button">Restart</button></div>'
+ 
     k2 = document.getElementsByClassName("finalscore")
-    k2[0].style.display="block"
+    k2[0].style.display="flex"
     k2[0].innerHTML = final
     
 }
