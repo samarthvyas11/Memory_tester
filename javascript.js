@@ -3,7 +3,7 @@ var oncard = [0,0];
 var ongoingcard = -1
 cards_in = " ";
 var steps = 0
-var done = 23
+var done = 0;
 var total = 5;
 var username = "";
 

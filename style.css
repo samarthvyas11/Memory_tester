@@ -267,23 +267,28 @@ body{
 
 .finalscore{
 	font-size:19px;
-	padding:4%;
-	width:20%;
-	margin:6%;
-		
+	width:100%;
+	
+}
+.final_image{
+    width: 85%;
+    height: 84vh;
 }
 .h11{
 	text-indent: 50px;
 	margin-left:29%;
 }
 .h12{
-	white-space: nowrap ;
-	margin-left:0%;
-	font-size:21px;
+    white-space: nowrap;
+    margin-left: 12%;
+    font-size: 21px;
 }
 .restart_button{
-	margin-left:111%;
-	margin-top:50%;
+	margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 }
