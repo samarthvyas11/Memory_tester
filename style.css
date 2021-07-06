@@ -288,6 +288,9 @@ body{
     align-items: center;
     
 }
+.container_main{
+    background-image: url();
+}
 
 }
 
@@ -301,7 +304,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-	background-image: url();
+	background-image: url("img4.jpeg");
 	background-repeat: no-repeat;
   
 

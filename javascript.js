@@ -6,6 +6,8 @@ var steps = 0
 var done = 0;
 var total = 5;
 var username = "";
+var gameover = new Audio("gameover.wav");
+var wrong = new Audio("wrong_card.wav");
 
 
 
@@ -117,7 +119,7 @@ async function cardclicked(N){
         
         }
         else
-        {
+        {   wrong.play();
             k1 = document.getElementById(card_num)
             k1.style.transform = "rotateY(180deg)";
             await sleep(1000);
@@ -153,6 +155,7 @@ function swapchange(N){
 }
 
 function completed(){
+    gameover.play()
     k2 = document.getElementsByClassName("container")
     k2[0].style.display = "none"
     
