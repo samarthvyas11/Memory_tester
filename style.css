@@ -301,7 +301,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-	background-image:url("img4.jpeg");
+	background-image: url();
 	background-repeat: no-repeat;
   
 
